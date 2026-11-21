@@ -1,17 +1,16 @@
-MODULE 5 RESPONSIVE NAVIGATION DELIVERABLE STARTER
+TWO POINT MUSEUM
 
-Required files:
-- index.html, visit.html, support.html: three-page demonstration shell
-- styles.css: shared component styles and TODO markers
-- navigation.js: minimal behavior scaffold and TODO markers
-- navigation-plan.html: planning, testing, code-defense, and AI evidence
-- README.txt: replace this text with your site description and testing notes
+A four-page museum site with a shared responsive header. News & Events links to a section on the homepage.
 
-Use:
-1. Extract the folder before editing.
-2. Keep the required filenames and relative paths.
-3. Replace bracketed placeholders and every TODO.
-4. Test all three pages from the extracted folder.
-5. Zip the complete folder. Re-extract that ZIP and test it before submission.
+Files
+- index.html — Home and News & Events
+- exhibits.html — Exhibits
+- visit.html — Plan Your Visit
+- support.html — Get Help
+- styles.css — Shared layout and navigation styles
+- navigation.js — Menu disclosure and keyboard behavior
+- navigation-plan.html — Navigation decisions, test results, peer feedback, and AI disclosure
+- screenshots/ — Narrow and wide navigation evidence
 
-Do not replace this scaffold with a framework, library, or navigation plug-in.
+Local testing
+Extract the ZIP and open index.html in a browser. Follow the navigation links to check that all four pages open and that News & Events jumps to the homepage section. At a narrow width, open Menu with Enter or Space and press Escape to confirm that focus returns to Menu. Widen the window to check that all five links appear in a row. See navigation-plan.html for the full test record.
