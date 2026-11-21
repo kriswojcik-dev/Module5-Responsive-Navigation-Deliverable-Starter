@@ -81,10 +81,10 @@
 
     </table>
     <h2>2. Breakpoint evidence</h2>
-    <p><strong>Method and widths tested:</strong> [Response]</p>
-    <p><strong>First content failure:</strong> [What happened and at what width?]</p>
-    <p><strong>Chosen breakpoint in relative units:</strong> [Response]</p>
-    <p><strong>Long-label and zoom retest:</strong> [Observed result and repair]</p>
+    <p><strong>Method and widths tested:</strong> I checked the homepage in Chrome at viewport widths of 511 and 512 CSS pixels. The navigation links stacked at 511 px. At 512 px, all five fit on one row without horizontal scrolling.</p>
+    <p><strong>First content failure:</strong> The five links needed about 470 CSS pixels to fit on one row, including link padding, gaps, and header padding. Below that estimated width, there is too little room for the row at its full size. The exact width where a label first wraps or the row overflows is still to be verified.</p>
+    <p><strong>Chosen breakpoint in relative units:</strong> I chose 32rem, which was 512 CSS pixels in the test. This gives the links about 42 px of extra room beyond the estimated minimum.</p>
+    <p><strong>Long-label and zoom retest:</strong> Pending. I’ll check the navigation with longer labels, at a 320 CSS-pixel viewport, and at 200% browser zoom, then record what happens and any changes I make.</p>
     <h2>3. Interaction and failure test record</h2>
     <table>
         <tr>
