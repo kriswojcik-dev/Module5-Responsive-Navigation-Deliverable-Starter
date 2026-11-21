@@ -39,13 +39,22 @@
 
 <body>
     <h1>Navigation Plan and Evidence</h1>
-    <p><strong>Student:</strong> Kristin Wojcik &nbsp; 
-        <strong>Site:</strong> Two Point Museum | Two Point Museum is a groundbreaking, multi-themed cultural institution where traditional history and science collide with the delightfully bizarre, housing an unmatched collection ranging from prehistoric fossils to supernatural relics and extraterrestrial oddities. Designed for curious minds of all ages, the museum delivers an immersive, interactive, and endlessly entertaining experience that invites families, lifelong learners, and thrill-seekers alike to explore the world’s strangest wonders up close.</p>
+    <p><strong>Student:</strong> Kristin Wojcik &nbsp;
+        <strong>Site:</strong> Two Point Museum | Two Point Museum is a groundbreaking, multi-themed cultural
+        institution where traditional history and science collide with the delightfully bizarre, housing an unmatched
+        collection ranging from prehistoric fossils to supernatural relics and extraterrestrial oddities. Designed for
+        curious minds of all ages, the museum delivers an immersive, interactive, and endlessly entertaining experience
+        that invites families, lifelong learners, and thrill-seekers alike to explore the world’s strangest wonders up
+        close.
+    </p>
     <h2>1. Priority tasks and content inventory</h2>
     <ol>
-        <li>Museum introduction: Visitors want to discover an eccentric, hands-on world where classic natural history collides with bizarre and humorous oddities.</li>
-        <li>Planning Your Visit: Visitors need to find essential logistics like the Two Point County location, operating hours, and online ticket options.</li>
-        <li>Upcoming Events: Visitors want to explore unique, interactive experiences ranging from after-hours ghost tours to live carnivorous plant feedings and family workshops.</li>
+        <li>Museum introduction: Visitors want to discover an eccentric, hands-on world where classic natural history
+            collides with bizarre and humorous oddities.</li>
+        <li>Planning Your Visit: Visitors need to find essential logistics like the Two Point County location, operating
+            hours, and online ticket options.</li>
+        <li>Upcoming Events: Visitors want to explore unique, interactive experiences ranging from after-hours ghost
+            tours to live carnivorous plant feedings and family workshops.</li>
     </ol>
     <table>
         <tr>
@@ -56,22 +65,26 @@
         <tr>
             <td>index.html</td>
             <td>Home</td>
-            <td>Introduces first-time visitors to the museum's unusual atmosphere so they know what to expect before planning a visit.</td>
+            <td>Introduces first-time visitors to the museum's unusual atmosphere so they know what to expect before
+                planning a visit.</td>
         </tr>
         <tr>
             <td>index.html#events</td>
             <td>News & Events</td>
-            <td>Visitors might discover an interesting event that encourages them to learn more about a related exhibit.</td>
+            <td>Visitors might discover an interesting event that encourages them to learn more about a related exhibit.
+            </td>
         </tr>
         <tr>
             <td>exhibits.html</td>
             <td>Exhibits</td>
-            <td>Visitors can find exhibits that interest them before researching ticket prices and travel arrangements.</td>
+            <td>Visitors can find exhibits that interest them before researching ticket prices and travel arrangements.
+            </td>
         </tr>
         <tr>
             <td>visit.html</td>
             <td>Visit</td>
-            <td>Once visitors decide what they want to see, they can find hours, directions, and ticket information.</td>
+            <td>Once visitors decide what they want to see, they can find hours, directions, and ticket information.
+            </td>
         </tr>
         <tr>
             <td>support.html</td>
@@ -82,10 +95,20 @@
     </table>
 
     <h2>2. Breakpoint evidence</h2>
-    <p><strong>Method and widths tested:</strong> I checked the homepage in Chrome at viewport widths of 511 and 512 CSS pixels. The navigation links stacked at 511 px. At 512 px, all five fit on one row without horizontal scrolling.</p>
-    <p><strong>First content failure:</strong> The five links needed about 470 CSS pixels to fit on one row, including link padding, gaps, and header padding. Below that estimated width, there is too little room for the row at its full size. The exact width where a label first wraps or the row overflows is still to be verified.</p>
-    <p><strong>Chosen breakpoint in relative units:</strong> I chose 32rem, which was 512 CSS pixels in the test. This gives the links about 42 px of extra room beyond the estimated minimum.</p>
-    <p><strong>Long-label and zoom retest:</strong> Pending. I’ll check the navigation with longer labels, at a 320 CSS-pixel viewport, and at 200% browser zoom, then record what happens and any changes I make.</p>
+    <p><strong>Method and widths tested:</strong> I checked the homepage in Chrome at viewport widths of 511 and 512 CSS
+        pixels. The navigation links stacked at 511 px. At 512 px, all five fit on one row without horizontal scrolling.
+    </p>
+    <p><strong>First content failure:</strong> The five links needed about 470 CSS pixels to fit on one row, including
+        link padding, gaps, and header padding. Below that estimated width, there is too little room for the row at its
+        full size. I temporarily forced the homepage navigation into a horizontal row in Chrome. At 471 CSS pixels, all
+        five labels fit on one line. At 470 CSS pixels, News & Events and Get Help wrapped to two lines. I kept the
+        breakpoint at 32rem (512 CSS pixels in Chrome) to give the original labels room to fit.</p>
+    <p><strong>Chosen breakpoint in relative units:</strong> I chose 32rem, which was 512 CSS pixels in the test. This
+        gives the links about 42 px of extra room beyond the estimated minimum.</p>
+    <p><strong>Long-label and zoom retest:</strong> At 320 CSS pixels, the longer label fit in the open vertical menu.
+        Near the wide breakpoint, the label wrapped inside its link, leaving extra visual space before Exhibits. At 512
+        CSS pixels, Get Help also wrapped. The links remained readable and the page did not scroll sideways. At 200%
+        zoom with the original labels, all five links fit and were visible.</p>
     <h2>3. Interaction and failure test record</h2>
     <table>
         <tr>
@@ -96,60 +119,98 @@
         </tr>
         <tr>
             <td>Keyboard: button, Tab, Escape, focus</td>
-            <td>[Expected]</td>
-            <td>[Observed]</td>
-            <td>[Pass/fail and repair]</td>
+            <td>Enter and Space open the menu. Tab moves focus to the first link and shows a visible outline. Escape
+                closes the menu and returns focus to Menu.</td>
+            <td>In Chrome at 320 CSS pixels, Enter and Space each opened the menu in separate checks. Tab moved focus to
+                Home, which had a gold outline. Escape from Home closed the menu and returned focus to Menu.</td>
+            <td>Pass. No repair was needed for the keyboard behavior.</td>
         </tr>
         <tr>
             <td>Pointer/touch targets</td>
-            <td>[Expected]</td>
-            <td>[Observed]</td>
-            <td>[Pass/fail and repair]</td>
+            <td>The Menu button and navigation links are easy to select and have space between them.</td>
+            <td>At 320 CSS pixels, Menu measured about 76 × 52 CSS pixels. Each navigation link measured 288 × 48 CSS
+                pixels, with a 4 px gap between links. During the peer test, the participant clicked Menu and then
+                selected Exhibits.</td>
+            <td>Pass for the measured target sizes and the peer’s pointer navigation. No repair was needed for those
+                checks.</td>
         </tr>
         <tr>
             <td>320px and breakpoint region</td>
-            <td>[Expected]</td>
-            <td>[Observed]</td>
-            <td>[Pass/fail and repair]</td>
+            <td>At 320 px, Menu opens a vertical list with all five links and no sideways scrolling. The layout switches
+                to a horizontal row at 32rem.</td>
+            <td>In Chrome, all five links were visible with Menu open at 320 px, with no horizontal scrolling. The
+                layout was vertical at 511 px and horizontal at 512 px. At 760 px, all five links were visible in one
+                row after the narrow menu had been closed.</td>
+            <td>Pass after moving the wide-screen Menu button rule outside the navigation list rule. The button was then
+                hidden at 760 px.</td>
         </tr>
         <tr>
             <td>200% zoom</td>
-            <td>[Expected]</td>
-            <td>[Observed]</td>
-            <td>[Pass/fail and repair]</td>
+            <td>At 200% browser zoom, all five navigation links remain readable and reachable, with no clipping or
+                horizontal scrolling.</td>
+            <td>At 200% zoom in Chrome, all five links fit and were visible.</td>
+            <td>Pass. No repair was needed for the zoom check.</td>
         </tr>
         <tr>
             <td>JavaScript unavailable</td>
-            <td>[Expected]</td>
-            <td>[Observed]</td>
-            <td>[Pass/fail and repair]</td>
+            <td>At 320 CSS pixels, all five navigation links are visible and usable without JavaScript.</td>
+            <td>After disabling JavaScript and reloading in Chrome at 320 CSS pixels, all five navigation links were
+                still visible.</td>
+            <td>Visibility check passed. No repair was needed. all links are functional without JavaScript.</td>
         </tr>
         <tr>
             <td>CSS unavailable / wide recovery</td>
-            <td>[Expected]</td>
-            <td>[Observed]</td>
-            <td>[Pass/fail and repair]</td>
+            <td>With CSS disabled, all five navigation links remain visible and usable. With CSS restored, widening the
+                viewport after closing the narrow menu shows all five links in a row.</td>
+            <td>With the stylesheet disabled, all five links were visible and Exhibits opened its page. In a separate
+                check, after closing the menu at 320 CSS pixels and widening to 760 CSS pixels, all five links appeared
+                in one row and the Menu button was hidden.</td>
+            <td> Pass. No repair was needed for the CSS-disabled check. The wide layout passed after I moved the Menu
+                button rule outside the .nav-list rule.</td>
         </tr>
     </table>
 
-    <p><strong>Screenshot filenames and what each proves:</strong> screenshots/nav-narrow.png shows the menu open at 320 CSS pixels, with all five links visible and Home marked as the current page. screenshots/nav-wide.png shows the five links in one row at 760 CSS pixels, with the Menu button hidden and the current-page marker still visible.</p>
+    <p><strong>Screenshot filenames and what each proves:</strong> screenshots/nav-narrow.png shows the menu open at 320
+        CSS pixels, with all five links visible and Home marked as the current page. screenshots/nav-wide.png shows the
+        five links in one row at 760 CSS pixels, with the Menu button hidden and the current-page marker still visible.
+    </p>
 
     <h2>4. Peer task test</h2>
     <p><strong>Tester relationship:</strong> Friend</p>
-    <p><strong>Two tasks attempted:</strong> 1.Navigate to the  Museums's Exhibits page from the Home page. 2.Navigate to the Museums's News and Events page from the Exhibits page. </p>
-    <p><strong>What the tester did or said:</strong> 1.The participant paused briefly on the homepage before spotting the Menu button. They opened it and selected Exhibits, reaching the Exhibits page. 2.The participant opened Menu on the Exhibits page and selected News & Events which took them to the Home page and automatically focused on the News & Events heading.</p>
-    <p><strong>Change made or justified:</strong> The participant hesitated before opening Menu the first time. On the second task, they used the same button again to find the next destination. Nothing needs to be changed.</p>
+    <p><strong>Testing environment:</strong> Desktop browser</p>
+    <p><strong>Two tasks attempted:</strong> 1.Navigate to the Museums's Exhibits page from the Home page. 2.Navigate to
+        the Museums's News and Events page from the Exhibits page. </p>
+    <p><strong>What the tester did or said:</strong> 1.The participant paused briefly on the homepage before spotting
+        the Menu button. They opened it and selected Exhibits, reaching the Exhibits page. 2.The participant opened Menu
+        on the Exhibits page and selected News & Events which took them to the Home page and automatically focused on
+        the News & Events heading.</p>
+    <p><strong>Change made or justified:</strong> The participant hesitated before opening Menu the first time. On the
+        second task, they used the same button again to find the next destination. Nothing needs to be changed.</p>
 
     <h2>5. JavaScript code defense</h2>
     <p>Explain initialization, state synchronization, activation, and Escape/focus behavior in your own words. Refer to
         the exact variable, attribute, dataset value, function, and event used.</p>
-    <p>[Response]</p>
-    
+    <p>The script uses `button` to find the Menu button and `list` to find the navigation links. The `if (button &&
+        list)` check makes sure both elements exist before the script attaches any event handlers. Once the handlers are
+        ready, `setMenuOpen(false)` sets the initial state to closed, and `button.hidden = false` reveals the working
+        button. If JavaScript is unavailable, the button stays hidden and the links remain visible.
+
+        The `setMenuOpen(isOpen)` function writes `"true"` or `"false"` to `aria-expanded`. Assistive technology can
+        read that state, and the narrow-screen CSS uses the same attribute to decide whether to show the links. At wide
+        widths, CSS hides the button and keeps the links visible in a row.
+
+        On a `click` event, the script reads `aria-expanded` and passes the opposite state to `setMenuOpen`. Because
+        Menu is a native button, Enter and Space activate the same click handler.
+
+        The `keydown` handler listens on the navigation so it can receive Escape from the button or a link. It checks
+        that the key is Escape, that the layout is narrow, and that the menu is open. If all three are true, it closes
+        the menu with `setMenuOpen(false)` and returns keyboard focus to Menu with `button.focus()`.</p>
+
     <h2>6. AI disclosure</h2>
-    <p><strong>Tool and purpose, or none:</strong> [Response]</p>
-    <p><strong>Prompt/task:</strong> [Response]</p>
-    <p><strong>Accepted, changed, or rejected output:</strong> [Response]</p>
-    <p><strong>How I verified it:</strong> [Tests and sources]</p>
+    <p><strong>Tool and purpose, or none:</strong> I used ChatGPT for step-by-step guidance on javascript development, code review, and breakpoint estimates.</p>
+    <p><strong>Prompt/task:</strong> I asked ChatGPT to help me understand the best practices for implementing a responsive navigation menu with JavaScript.</p>
+    <p><strong>Accepted, changed, or rejected output:</strong> I used suggested JavaScript snippets and placed them into the starter files myself. I corrected where the wide-screen Menu button rule was placed after testing showed the button was still visible. I replaced the breakpoint estimate with an observed result after checking the horizontal layout.</p>
+    <p><strong>How I verified it:</strong> I tested the site in Chrome at narrow and wide widths, at 200% zoom, and with JavaScript and CSS disabled separately. ChatGPT helped check the breakpoint, keyboard focus, and target sizes in the browser. I captured two screenshots and asked a friend to attempt two navigation tasks.</p>
 </body>
 
 </html>
