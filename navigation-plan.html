@@ -49,12 +49,9 @@
     </p>
     <h2>1. Priority tasks and content inventory</h2>
     <ol>
-        <li>Museum introduction: Visitors want to discover an eccentric, hands-on world where classic natural history
-            collides with bizarre and humorous oddities.</li>
-        <li>Planning Your Visit: Visitors need to find essential logistics like the Two Point County location, operating
-            hours, and online ticket options.</li>
-        <li>Upcoming Events: Visitors want to explore unique, interactive experiences ranging from after-hours ghost
-            tours to live carnivorous plant feedings and family workshops.</li>
+        <li>Get a quick introduction to Two Point Museum.</li>
+        <li>Preview the types of exhibits the museum features.</li>
+        <li>Find where to start planning a visit or getting help.</li>
     </ol>
     <table>
         <tr>
@@ -71,25 +68,25 @@
         <tr>
             <td>index.html#events</td>
             <td>News & Events</td>
-            <td>Visitors might discover an interesting event that encourages them to learn more about a related exhibit.
+            <td>News & Events follows Home because it links to an updates section on the homepage.
             </td>
         </tr>
         <tr>
             <td>exhibits.html</td>
             <td>Exhibits</td>
-            <td>Visitors can find exhibits that interest them before researching ticket prices and travel arrangements.
+            <td>Exhibits comes before Visit so visitors can get a sense of what they might see before planning their trip.
             </td>
         </tr>
         <tr>
             <td>visit.html</td>
             <td>Visit</td>
-            <td>Once visitors decide what they want to see, they can find hours, directions, and ticket information.
+            <td>Visit gives visitors a starting point for planning a trip.
             </td>
         </tr>
         <tr>
             <td>support.html</td>
             <td>Get Help</td>
-            <td>Visitors who still need assistance can find FAQs or submit inquiries.</td>
+            <td>Get Help comes last as a place to start if visitors still have questions.</td>
         </tr>
 
     </table>
@@ -122,10 +119,11 @@
             <td>Enter and Space open the menu. Tab moves focus to the first link and shows a visible outline. Escape
                 closes the menu and returns focus to Menu.</td>
             <td>In Chrome at 320 CSS pixels, Enter and Space each opened the menu in separate checks. Tab moved focus to
-                Home, which had a gold outline. Escape from Home closed the menu and returned focus to Menu.</td>
+                Home, which had a gold outline. Escape from Home closed the menu and returned focus to Menu. On the homepage, Tab revealed the skip link. Enter moved to `#main`, and the next Tab moved past the header links to the browser controls.</td>
             <td>Pass. No repair was needed for the keyboard behavior.</td>
         </tr>
         <tr>
+
             <td>Pointer/touch targets</td>
             <td>The Menu button and navigation links are easy to select and have space between them.</td>
             <td>At 320 CSS pixels, Menu measured about 76 × 52 CSS pixels. Each navigation link measured 288 × 48 CSS
@@ -135,6 +133,7 @@
                 checks.</td>
         </tr>
         <tr>
+
             <td>320px and breakpoint region</td>
             <td>At 320 px, Menu opens a vertical list with all five links and no sideways scrolling. The layout switches
                 to a horizontal row at 32rem.</td>
@@ -145,6 +144,7 @@
                 hidden at 760 px.</td>
         </tr>
         <tr>
+
             <td>200% zoom</td>
             <td>At 200% browser zoom, all five navigation links remain readable and reachable, with no clipping or
                 horizontal scrolling.</td>
@@ -152,12 +152,15 @@
             <td>Pass. No repair was needed for the zoom check.</td>
         </tr>
         <tr>
+
             <td>JavaScript unavailable</td>
             <td>At 320 CSS pixels, all five navigation links are visible and usable without JavaScript.</td>
-            <td>After disabling JavaScript and reloading in Chrome at 320 CSS pixels, all five were visible and Exhibits opened successfully.</td>
+            <td>After disabling JavaScript and reloading in Chrome at 320 CSS pixels, all five were visible and Exhibits
+                opened successfully.</td>
             <td>Pass for link visibility and the Exhibits link. No repair was needed.</td>
         </tr>
         <tr>
+            
             <td>CSS unavailable / wide recovery</td>
             <td>With CSS disabled, all five navigation links remain visible and usable. With CSS restored, widening the
                 viewport after closing the narrow menu shows all five links in a row.</td>
@@ -206,10 +209,17 @@
         the menu with `setMenuOpen(false)` and returns keyboard focus to Menu with `button.focus()`.</p>
 
     <h2>6. AI disclosure</h2>
-    <p><strong>Tool and purpose, or none:</strong> I used ChatGPT for step-by-step guidance on javascript development, code review, and breakpoint estimates.</p>
-    <p><strong>Prompt/task:</strong> I asked ChatGPT to help me understand the best practices for implementing a responsive navigation menu with JavaScript.</p>
-    <p><strong>Accepted, changed, or rejected output:</strong> I used suggested JavaScript snippets and placed them into the starter files myself. I corrected where the wide-screen Menu button rule was placed after testing showed the button was still visible. I replaced the breakpoint estimate with an observed result after checking the horizontal layout.</p>
-    <p><strong>How I verified it:</strong> I tested the site in Chrome at narrow and wide widths, at 200% zoom, and with JavaScript and CSS disabled separately. ChatGPT helped check the breakpoint, keyboard focus, and target sizes in the browser. I captured two screenshots and asked a friend to attempt two navigation tasks.</p>
+    <p><strong>Tool and purpose, or none:</strong> I used ChatGPT for step-by-step guidance on javascript development,
+        code review, and breakpoint estimates.</p>
+    <p><strong>Prompt/task:</strong> I asked ChatGPT to help me understand the best practices for implementing a
+        responsive navigation menu with JavaScript.</p>
+    <p><strong>Accepted, changed, or rejected output:</strong> I used suggested JavaScript snippets and placed them into
+        the starter files myself. I corrected where the wide-screen Menu button rule was placed after testing showed the
+        button was still visible. I replaced the breakpoint estimate with an observed result after checking the
+        horizontal layout.</p>
+    <p><strong>How I verified it:</strong> I tested the site in Chrome at narrow and wide widths, at 200% zoom, and with
+        JavaScript and CSS disabled separately. ChatGPT helped check the breakpoint, keyboard focus, and target sizes in
+        the browser. I captured two screenshots and asked a friend to attempt two navigation tasks.</p>
 </body>
 
 </html>
