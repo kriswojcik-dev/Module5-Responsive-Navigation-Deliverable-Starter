@@ -95,3 +95,8 @@ main {
         display: flex;
     }
 }
+@media (width < 32rem) {
+    .menu-button:not([hidden])[aria-expanded="false"] + .nav-list {
+        display: none;
+    }
+}
