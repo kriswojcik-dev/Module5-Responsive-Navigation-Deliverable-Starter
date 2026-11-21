@@ -96,12 +96,12 @@ main {
 }
 
 @media (min-width: 32rem) {
+    .menu-button {
+        display: none;
+    }
+
     .nav-list {
         display: flex;
-
-        .menu-button {
-            display: none;
-        }
     }
 }
 
